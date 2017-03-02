@@ -1,0 +1,35 @@
+{
+  "name": "worldofcrew",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./bin/www",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "joseph p <josephp90@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "angular-messages": "^1.4.7",
+    "bcrypt": "^0.8.5",
+    "body-parser": "^1.13.2",
+    "cheerio": "^0.22.0",
+    "debug": "^2.2.0",
+    "express": "^4.13.1",
+    "jsonwebtoken": "^5.0.5",
+    "lodash": "^3.10.1",
+    "moment": "^2.10.6",
+    "mongodb": "^2.0.39",
+    "morgan": "^1.6.1",
+    "multer": "^1.0.3",
+    "nodemon": "^1.11.0",
+    "request": "^2.79.0",
+    "socket.io": "^1.3.6",
+    "winston": "^1.0.1"
+  },
+  "devDependencies": {}
+}

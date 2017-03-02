@@ -1,0 +1,97 @@
+<div class="content-page">
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card-box table-responsive">
+
+                        <div class="col-lg-6">
+                            <form class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Name</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" ng-model="doc.displayName">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">First name</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" ng-model="doc.firstName">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Last name</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" ng-model="doc.lastName">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Airlines</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" ng-model="doc.airlines">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Country</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" ng-model="doc.country">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">City</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" ng-model="doc.city">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Joined us</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" ng-model="doc.created">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Last login</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" ng-model="doc.title">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Facebook Email</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" ng-model="doc.email">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Email</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" ng-model="doc.email">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Phone</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" ng-model="doc.phone">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Age</label>
+                                    <div class="col-md-10">
+                                        {{ age }}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Photo</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" ng-model="doc.photo">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <button type="submit" class="btn btn-info waves-effect waves-light" ng-click="save()">Save</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

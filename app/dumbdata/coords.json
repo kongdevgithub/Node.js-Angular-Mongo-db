@@ -1,0 +1,51 @@
+[{
+    "Discount": "30%",
+    "Latitude": 55.66416987,
+    "Longitude": 12.55387844,
+    "Title": "A"
+}, {
+    "Discount": "40%",
+    "Latitude": 55.6587461,
+    "Longitude": 12.51491988,
+    "Title": "B"
+}, {
+    "Discount": "35%",
+    "Latitude": 55.63756644,
+    "Longitude": 12.55034619,
+    "Title": "C"
+}, {
+    "Discount": "25%",
+    "Latitude": 55.67674284,
+    "Longitude": 12.54705104,
+    "Title": "D"
+}, {
+    "Discount": "50%",
+    "Latitude": 55.68294796,
+    "Longitude": 12.62472876,
+    "Title": "E"
+}, {
+    "Discount": "30%",
+    "Latitude": 55.63616909,
+    "Longitude": 12.58779328,
+    "Title": "F"
+}, {
+    "Discount": "70%",
+    "Latitude": 55.65935877,
+    "Longitude": 12.52961378,
+    "Title": "G"
+}, {
+    "Discount": "50%",
+    "Latitude": 55.66017571,
+    "Longitude": 12.60963153,
+    "Title": "H"
+}, {
+    "Discount": "45%",
+    "Latitude": 55.69897257,
+    "Longitude": 12.55603402,
+    "Title": "I"
+}, {
+    "Discount": "90%",
+    "Latitude": 55.64510241,
+    "Longitude": 12.533412,
+    "Title": "J"
+}]

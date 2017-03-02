@@ -1,0 +1,123 @@
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 col-md-4">
+                    <div class="card-box">
+                        <div class="dropdown pull-right">
+                            <a href="#!/discounts" class="dropdown-toggle card-drop">
+                                <i class="zmdi zmdi-more-vert"></i>
+                            </a>
+                        </div>
+
+                        <h4 class="header-title m-t-0 m-b-30">Discounts</h4>
+                        <h2>
+                            <span ng-if="discounts.length">{{ discounts.length }}</span>
+                            <span ng-if="!discounts.length">Loading...</span>
+                        </h2>
+                        <hr>
+                        <h4 class="header-title m-t-0 m-b-30">Reported Discounts</h4>
+                        <h2>
+                            <span ng-if="reportedDiscounts.length">{{ reportedDiscounts.length }}</span>
+                            <span ng-if="!reportedDiscounts.length">Loading...</span>
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4">
+                    <div class="card-box">
+                        <div class="dropdown pull-right">
+                            <a href="#!/users" class="dropdown-toggle card-drop">
+                                <i class="zmdi zmdi-more-vert"></i>
+                            </a>
+                        </div>
+
+                        <h4 class="header-title m-t-0 m-b-30">Total Users</h4>
+                        <h3>
+                            <span ng-if="fbUsers.length && emailUsers.length">{{ fbUsers.length + emailUsers.length }}</span>
+                            <span ng-if="!fbUsers.length || !emailUsers.length">Loading...</span>
+                        </h3>
+                        <br>
+                        <div style="margin-bottom: 100px;">
+                            <span style="float: left">
+                                <h4 class="header-title m-t-0 m-b-30">Email</h4>
+                                <h3 ng-if="emailUsers.length">{{ emailUsers.length }}</h3>
+                                <h3 ng-if="!emailUsers.length">Loading...</h3>
+                            </span>
+                            <span style="float: right">
+                                <h4 class="header-title m-t-0 m-b-30">Facebook</h4>
+                                <h3 ng-if="fbUsers.length">{{ fbUsers.length }}</h3>
+                                <h3 ng-if="!fbUsers.length">Loading...</h3>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4">
+                    <div class="card-box">
+                        <div class="dropdown pull-right">
+                            <a href="#!/airlines" class="dropdown-toggle card-drop">
+                                <i class="zmdi zmdi-more-vert"></i>
+                            </a>
+                        </div>
+
+                        <h4 class="header-title m-t-0 m-b-30">Reported Airlines</h4>
+                        <h2>
+                            <span ng-if="airlines.length">{{ airlines.length }}</span>
+                            <span ng-if="!airlines.length">Loading...</span>
+                        </h2>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-4 col-md-4">
+                    <div class="card-box">
+                        <h4 class="header-title m-t-0 m-b-30">Analytics</h4>
+                        <hr>
+                        <h4 class="header-title m-t-0 m-b-30">Daily Active Users</h4>
+                        <h3 ng-if="stat.daily">{{ stat.daily }}</h3>
+                        <h3 ng-if="!stat.daily">0</h3>
+                        <hr>
+                        <h4 class="header-title m-t-0 m-b-30">Weekly Active Users</h4>
+                        <h3 ng-if="stat.weekly">{{ stat.weekly }}</h3>
+                        <h3 ng-if="!stat.weekly">0</h3>
+                        <hr>
+                        <h4 class="header-title m-t-0 m-b-30">Monthly Active Users</h4>
+                        <h3 ng-if="stat.monthly">{{ stat.monthly }}</h3>
+                        <h3 ng-if="!stat.monthly">0</h3>
+                        <hr>
+                        <h4 class="header-title m-t-0 m-b-30">Total Downloads</h4>
+                        <h3 ng-if="totalAndroidDownloads">{{ totalAndroidDownloads }}</h3>
+                        <h3 ng-if="!totalAndroidDownloads">Loading...</h3>
+                        <hr>
+                        <h4 class="header-title m-t-0 m-b-30">Total Users</h4>
+                        <h3>
+                            <span ng-if="fbUsers.length && emailUsers.length">{{ fbUsers.length + emailUsers.length }}</span>
+                            <span ng-if="!fbUsers.length || !emailUsers.length">Loading...</span>
+                        </h3>
+                        <br>
+                        <div style="margin-bottom: 100px;">
+                            <span style="float: left">
+                                <h4 class="header-title m-t-0 m-b-30">Email</h4>
+                                <h3 ng-if="emailUsers.length">{{ emailUsers.length }}</h3>
+                                <h3 ng-if="!emailUsers.length">Loading...</h3>
+                            </span>
+                            <span style="float: right">
+                                <h4 class="header-title m-t-0 m-b-30">Facebook</h4>
+                                <h3 ng-if="fbUsers.length">{{ fbUsers.length }}</h3>
+                                <h3 ng-if="!fbUsers.length">Loading...</h3>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

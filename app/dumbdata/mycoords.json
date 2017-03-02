@@ -1,0 +1,92 @@
+[{
+    "latitude": 55.66416987,
+    "longitude": 12.55387844,
+    "deals": [
+        {
+            "title": "A",
+            "discount": "30%"
+        }
+    ]
+},{
+    "latitude": 55.6587461,
+    "longitude": 12.51491988,
+    "deals": [
+        {
+            "title": "B",
+            "discount": "40%"
+        }
+    ]
+},{
+    "latitude": 55.63756644,
+    "longitude": 12.55034619,
+    "deals": [
+        {
+            "title": "C",
+            "discount": "35%"
+        }
+    ]
+},{
+    "latitude": 55.67674284,
+    "longitude": 12.54705104,
+    "deals": [
+        {
+            "title": "D",
+            "discount": "25%"
+        }
+    ]
+},{
+    "latitude": 55.68294796,
+    "longitude": 12.62472876,
+    "deals": [
+        {
+            "title": "E",
+            "discount": "50%"
+        }
+    ]
+},{
+    "latitude": 55.63616909,
+    "longitude": 12.58779328,
+    "deals": [
+        {
+            "title": "F",
+            "discount": "30%"
+        }
+    ]
+},{
+    "latitude": 55.65935877,
+    "longitude": 12.52961378,
+    "deals": [
+        {
+            "title": "G",
+            "discount": "70%"
+        }
+    ]
+},{
+    "latitude": 55.66017571,
+    "longitude": 12.60963153,
+    "deals": [
+        {
+            "title": "H",
+            "discount": "50%"
+        }
+    ]
+},{
+    "latitude": 55.69897257,
+    "longitude": 12.55603402,
+    "deals": [
+        {
+            "title": "I",
+            "discount": "45%"
+        }
+    ]
+},{
+    "latitude": 55.64510241,
+    "longitude": 12.533412,
+    "deals": [
+        {
+            "title": "J",
+            "discount": "90%"
+        }
+    ]
+}
+]

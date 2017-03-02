@@ -1,0 +1,37 @@
+{
+  "name": "WOC",
+  "authors": [
+    "Valeri Kuparashvili <vatex.2000@gmail.com>"
+  ],
+  "description": "",
+  "main": "app.js",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.6.0",
+    "angular-bootstrap": "~0.13.3",
+    "angular-fontawesome": "~0.4.0",
+    "angular-google-maps": "~2.1.5",
+    "angular-material": "~0.10.1",
+    "angular-moment": "~0.10.2",
+    "angular-momentjs": "~0.2.2",
+    "angular-socket-io": "~0.7.0",
+    "angular-ui-router": "~0.2.15",
+    "bootstrap": "~3.3.5",
+    "ng-lodash": "~0.2.3",
+    "ngSocket": "~0.2.1",
+    "angular-messages": "~1.4.7",
+    "angularUtils-pagination": "angular-utils-pagination#~0.9.0",
+    "lodash": "^4.17.2",
+    "angular-ui-grid": "^4.0.1",
+    "ng-sweet-alert": "^1.0.8"
+  }
+}

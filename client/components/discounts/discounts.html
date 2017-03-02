@@ -1,0 +1,37 @@
+
+<!-- <div  tabindex="-1" role="main"  aria-hidden="false">
+<md-content style="height:400px;overflow:hidden;" class="ng-scope md-default-theme">
+<ui-gmap-google-map center='map.center' zoom='map.zoom' options='map.options' bounds='map.bounds' events="events">
+<ui-gmap-search-box template='map.searchbox.template' position='map.searchbox.position' events='map.searchbox.events' options='map.searchbox.options'>
+<ui-gmap-markers models="map.markers" coords="'self'" options="{'draggable': draggable}" click="onMarkerClicked">
+<ui-gmap-windows show="'showWindow'" closeClick="'closeClick'" ng-cloak>
+<div ng-non-bindable>
+<p>Title: {{title}}</p>
+<p>Discount: {{discount}}</p>
+<p>Category: {{category}}</p>
+</div>
+</ui-gmap-windows>
+</ui-gmap-markers>
+</ui-gmap-search-box>
+</ui-gmap-google-map>
+</md-content>
+</div> -->
+
+
+<div class="content-page">
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card-box table-responsive" style="height: calc(100vh - 100px)">
+                        <h4 class="header-title m-t-0 m-b-30" style="float: left;">Discounts</h4>
+                        <a type="button" class="btn btn-primary btn-bordred waves-effect w-md waves-light m-b-5" style="float: right;" href="#!/discount/add">Add</a>
+
+                        <div id="grid" ui-grid="gridOptions" ui-grid-pagination ui-grid-exporter ui-grid-importer class="grid" style="margin-top: 55px; height: calc(100% - 60px);"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

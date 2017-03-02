@@ -1,0 +1,174 @@
+<script src="assets/plugins/tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+	    if($("#elm1").length > 0){
+	        tinymce.init({
+	            selector: "textarea#elm1",
+	            theme: "modern",
+	            height:300,
+	            plugins: [
+	                "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+	                "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+	                "save table contextmenu directionality emoticons template paste textcolor"
+	            ],
+	            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons",
+	            style_formats: [
+	                {title: 'Bold text', inline: 'b'},
+	                {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
+	                {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
+	                {title: 'Example 1', inline: 'span', classes: 'example1'},
+	                {title: 'Example 2', inline: 'span', classes: 'example2'},
+	                {title: 'Table styles'},
+	                {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
+	            ]
+	        });
+	    }
+	});
+</script>
+
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card-box">
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Title</label>
+                                        <div class="col-md-10">
+                                            <input ng-if="!reported.placeName" type="text" class="form-control" ng-model="doc.title">
+                                            <input ng-if="reported.placeName" style="border-color: red;" type="text" class="form-control" ng-model="doc.title">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Discount</label>
+                                        <div class="col-md-10">
+                                            <input type="text" ng-if="!reported.discount" class="form-control" ng-model="doc.discount">
+                                            <input type="text" ng-if="reported.discount" style="border-color: red;" class="form-control" ng-model="doc.discount">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Category</label>
+                                        <div class="col-md-10">
+                                            <select class="form-control" required ng-model="doc.category" ng-init="doc.category" ng-options="category.name as category.name for category in categories">
+                                                <option value="" disabled selected>Select Category</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Description</label>
+                                        <div class="col-md-10">
+                                            <div class="card-box">
+        										<textarea id="elm1" name="area" ng-model="doc.description"></textarea>
+            								</div>
+                                        </div>
+                                    </div>
+									<div class="form-group">
+										<label class="col-md-2 control-label">Location</label>
+										<div class="col-md-10">
+											<input type="text" class="form-control" id="us3-address">
+										</div>
+									</div>
+									<button type="submit" class="btn btn-info waves-effect waves-light" ng-click="save()">Save</button>
+                                </form>
+                            </div><!-- end col -->
+
+                            <div class="col-lg-6">
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Country</label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" ng-model="doc.country">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">City</label>
+                                        <div class="col-md-10">
+                                            <input type="text" class="form-control" ng-model="doc.city">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Airline</label>
+                                        <div class="col-md-10">
+											<select class="form-control" required ng-model="doc.airline" ng-init="doc.airline" ng-options="airline.airline as airline.airline for airline in airlines">
+                                                <option value="" disabled selected>Select Airline</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Email</label>
+                                        <div class="col-md-10">
+                                            <input type="text" ng-if="!reported.email" class="form-control" ng-model="doc.email">
+                                            <input type="text" ng-if="reported.email" style="border-color: red;" class="form-control" ng-model="doc.email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Phone / Country code</label>
+                                        <div class="col-md-10">
+                                            <input type="text" ng-if="!reported.phone" class="form-control" ng-model="doc.phone">
+                                            <input type="text" ng-if="reported.phone" style="border-color: red;" class="form-control" ng-model="doc.phone">
+                                        </div>
+                                    </div>
+									<div class="form-group">
+										<label class="col-md-2 control-label">Address</label>
+										<div class="col-md-10">
+											<input type="text" ng-if="!reported.location" class="form-control" ng-model="doc.address">
+											<input type="text" ng-if="reported.location" style="border-color: red;" class="form-control" ng-model="doc.address">
+										</div>
+									</div>
+                                    <div class="form-group">
+                                        <div class="checkbox checkbox-primary">
+                                            <input id="checkbox1" type="checkbox" ng-model="doc.disabled" ng-checked="doc.disabled">
+                                            <label for="checkbox1">
+                                                Disabled
+                                            </label>
+                                        </div>
+                                    </div>
+									<!-- <div class="form-group">
+                                        <label class="col-md-2 control-label">Expires</label>
+                                        <div class="col-md-10">
+                                            <input type="date" class="form-control" ng-model="doc.expires">
+                                        </div>
+                                    </div> -->
+                                    <div layout="row" flex>
+                                        <div flex>
+                                            <label>Image</label>
+                                            <input type="file" id="pinImage" file-model="pin.image" ng-file-select="onFileSelect($files)">
+                                        </div>
+                                        <div class="column" flex>
+                                            <img ng-hide="imageSrc" ng-src="{{doc.image}}" class="img-thumbnail wd-pinImage" alt="put your image here">
+                                            <img ng-show="imageSrc" ng-src="{{imageSrc}}" class="img-thumbnail wd-pinImage">
+                                            <div class="alert alert-info" role="alert" ng-show="imageSrc">This is how the image will appear in app!</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+								<br>
+
+								<div id="us3" class="col-sm-10" style="width: 100%; height: 400px;"></div>
+				                <div class="clearfix">&nbsp;</div>
+				                <div class="m-t-small">
+				                    <div class="col-sm-3">
+				                        <input name="lat" class="form-control" id="us3-lat" ng-model="doc.latitude" />
+				                    </div>
+				                    <div class="col-sm-3">
+				                        <input name="long" class="form-control" id="us3-lon" ng-model="doc.longitude" />
+				                    </div>
+				                </div>
+				                <div class="clearfix"></div>
+                            </form>
+
+                        </div><!-- end row -->
+                    </div>
+                </div><!-- end col -->
+
+            </div> <!-- container -->
+
+        </div> <!-- content -->
+
+    </div>

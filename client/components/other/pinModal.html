@@ -1,0 +1,122 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <button aria-hidden="true" class="close" type="button" ng-click="cancel()">×</button>
+        <h3 class="modal-title">Edit Pin</h3>
+    </div>
+    <!-- changed the function! ad it to button no the form -->
+    <form name="editPinForm" novalidate>
+        <div class="modal-body">
+            <div layout="column">
+                <div layout="row" flex>
+                    <md-input-container md-no-float flex>
+                        <label>Title</label>
+                        <input name="title" required md-maxlength="30" ng-model="pin.title" type="text">
+                        <div ng-messages="editPinForm.title.$error">
+                            <div ng-message="required" ng-show="editPinForm.title.$error.required && editPinForm.title.$touched">
+                                This is required.
+                            </div>
+                        </div>
+                    </md-input-container>
+                    <div class="form-group" flex>
+                        <select name="category" class="form-control wd-select" required ng-model="pin.category" ng-init="pin.category" ng-options="category.name as category.name for category in categories">
+                            <option value="" disabled selected>Select Category</option>
+                        </select>
+                        <div ng-messages="editPinForm.category.$error">
+                            <div style="color: red; font-size: 12px;" ng-message="required" ng-show="editPinForm.category.$error.required && editPinForm.category.$touched">
+                                This is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div layout="row" flex>
+                <md-input-container md-no-float flex>
+                    <label>Discount</label>
+                    <input name="discount" required ng-model="pin.discount" type="text" ng-pattern=" /[0-9]*\.?[0-9]+%/">
+                    <div ng-messages="editPinForm.discount.$error">
+                            <div ng-message="required" ng-show="editPinForm.discount.$error.required && editPinForm.discount.$touched">
+                                This is required.
+                            </div>
+                            <div ng-message="pattern" ng-show="editPinForm.discount.$error.pattern && editPinForm.discount.$touched">
+                                Please use the "XX%" pattern.
+                            </div>
+                        </div>
+                </md-input-container>
+                <md-input-container md-no-float flex>
+                    <label>Address</label>
+                    <input name="Address" ng-model="pin.address" type="text">
+                </md-input-container>
+            </div>
+            <div layout="row" flex>
+                <md-input-container md-no-float flex>
+                    <label>Place Name</label>
+                    <input name="placeName" ng-model="pin.placeName" type="text">
+                </md-input-container>
+                <md-input-container md-no-float flex>
+                    <label>Email</label>
+                    <input name="email" required ng-model="pin.email" type="email" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/">
+                    <div ng-messages="editPinForm.email.$error">
+                            <div ng-message="required" ng-show="editPinForm.email.$error.required && editPinForm.email.$touched">
+                                This is required.
+                            </div>
+                            <div ng-message="pattern" ng-show="editPinForm.email.$error.pattern && editPinForm.email.$touched">
+                                Please use the "someone@domain.xx" pattern.
+                            </div>
+                        </div>
+                </md-input-container>
+            </div>
+            <div layout="row" flex>
+                <md-input-container md-no-float flex>
+                    <label>Company Name</label>
+                    <input name="companyName" required ng-model="pin.companyName" type="text">
+                    <div ng-messages="editPinForm.companyName.$error">
+                            <div ng-message="required" ng-show="editPinForm.companyName.$error.required && editPinForm.companyName.$touched">
+                                This is required.
+                            </div>
+                        </div>
+                </md-input-container>
+                <md-input-container md-no-float flex>
+                    <label>Phone Number</label>
+                    <input name="phone" ng-keypress="phoneFilter($event)" ng-model="pin.phone" type="tel">
+                </md-input-container>
+            </div>
+            <div layout="row" flex>
+                <md-input-container flex>
+                    <label>Description</label>
+                    <textarea ng-model="pin.description" columns="1" md-maxlength="150"></textarea>
+                </md-input-container>
+                <!-- fixed the expires -->
+                <md-input-container flex>
+                    <label>Expires</label>
+                    <input type="date" name="expirate" required ng-model="pin.expires">
+                    <div ng-messages="editPinForm.expirate.$error">
+                            <div ng-message="required" ng-show="editPinForm.expirate.$error.required && editPinForm.expirate.$touched">
+                                This is required.
+                            </div>
+                        </div>
+                </md-input-container>
+            </div>
+            <div layout="row" flex>
+                <md-switch ng-model="pin.disabled" aria-label="Disabled">
+                    Disabled
+                </md-switch>
+            </div>
+            <div layout="row" flex>
+                <div flex>
+                    <label>Image</label>
+                    <input type="file" id="pinImage" file-model="pin.image" ng-file-select="onFileSelect($files)">
+                </div>
+                <div class="column" flex>
+                    <img ng-hide="imageSrc" ng-src="{{image}}" class="img-thumbnail wd-pinImage" alt="put your image here">
+                    <img ng-show="imageSrc" ng-src="{{imageSrc}}" class="img-thumbnail wd-pinImage">
+                    <div class="alert alert-info" role="alert" ng-show="imageSrc">This is how the image will appear in app!</div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <md-button class="md-raised" ng-click="cancel()">Cancel</md-button>
+            <md-button class="md-raised md-primary" ng-click="savePin()" ng-disabled="editPinForm.$invalid">Save</md-button>
+        </div>
+    </form>
+</div>
+</div>
